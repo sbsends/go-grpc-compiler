@@ -17,5 +17,7 @@ RUN mkdir -p /tmp/protoc && \
 
 # Get the source from GitHub
 RUN go get google.golang.org/grpc
+# Install Third Party Helpers
+RUN go get github.com/grpc-ecosystem/grpc-gateway 
 # Install protoc-gen-go
 RUN go get github.com/golang/protobuf/protoc-gen-go
