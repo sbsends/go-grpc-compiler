@@ -1,8 +1,7 @@
-FROM golang:1.10
+FROM golang:1.11.1-stretch
 
 RUN apt-get update && apt-get -y install unzip && apt-get clean
 
-# install protobuf
 ENV PB_VER 3.6.1
 ENV PB_URL https://github.com/google/protobuf/releases/download/v${PB_VER}/protoc-${PB_VER}-linux-x86_64.zip
 RUN mkdir -p /tmp/protoc && \
@@ -19,6 +18,5 @@ RUN mkdir -p /tmp/protoc && \
 RUN go get google.golang.org/grpc
 # Install protoc-gen-go
 RUN go get github.com/golang/protobuf/protoc-gen-go
-
 RUN go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 RUN go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
