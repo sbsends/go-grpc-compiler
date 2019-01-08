@@ -9,7 +9,7 @@ Go Proto Compiler is a Dockerfile containerizes protoc and gRPC/Google proto dep
 
 ```bash
 
-docker build . -t proto_compiler
+docker build . -t go_proto_compiler
 
 ```
 
