@@ -1,1 +1,1 @@
-docker build . -t proto_compiler
+docker build . -t go_proto_compiler
